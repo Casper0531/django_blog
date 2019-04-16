@@ -18,7 +18,11 @@ Including another URLconf
 It is responsible for mapping the routes and paths in project
 """
 from django.urls import path
+from django.conf.urls import url
+
+from boards import views
 
 urlpatterns = [
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
 ]
