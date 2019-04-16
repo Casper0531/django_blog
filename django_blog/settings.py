@@ -29,6 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Custom Apps Here
+    'boards',
 ]
 
 MIDDLEWARE = [
@@ -64,8 +67,9 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
+# SQLite (an embedded database engine) : Convinient, Do not install anything else
+# It's not quite suite for High-volume websites, write-intensive app, large-db..
+# => USE MySQL, PostgreSQL, Oracle
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
